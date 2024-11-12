@@ -1,1 +1,50 @@
-<p>client-list works!</p>
+<section class="cliente-list-container">
+    <div class="title-container">
+        <!-- componente title -->
+         <app-title (eventclick)="createUser($event)" [buttonName]="'Create new user'" [iconName]="'add'" [background]="'red'"></app-title>
+    </div>
+
+    <app-border>
+        <div class="border-container">
+            <div class="shared-container">
+                <input type="text">
+            </div>
+    
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Dirección</th>
+                            <th>Rol</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>+123456789</td>
+                            <td>Calle Falsa 123</td>
+                            <td>Administrador</td>
+                            <td class="actions">
+                                <button class="btn btn-edit">Editar</button>
+                                <button class="btn btn-delete">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>María Gómez</td>
+                            <td>+987654321</td>
+                            <td>Avenida Siempre Viva 456</td>
+                            <td>Usuario</td>
+                            <td class="actions">
+                                <button class="btn btn-edit">Editar</button>
+                                <button class="btn btn-delete">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </app-border>
+</section>
