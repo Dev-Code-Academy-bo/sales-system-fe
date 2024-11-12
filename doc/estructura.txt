@@ -1,0 +1,24 @@
+public
+|
+src
+|  |_app
+|  |     |_app.component.css
+|  |     |_app.component.html
+|  |     |_app.component.spec.ts
+|  |     |_app.component.ts
+|  |     |_app.config.ts
+|  |     |_app.routes.ts
+|  |_index.html
+|  |_main.ts
+|  |_styles.css
+|_.editorconfig
+|_.gitignore
+|_angular.json
+|_package-lock.json
+|_package.json
+|_postcss.config.js
+|_README.md
+|_tailwind.config.js
+|_tsconfig.app.json
+|_tsconfig.json
+|_tsconfig.spec.json
