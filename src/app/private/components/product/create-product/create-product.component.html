@@ -7,10 +7,14 @@
         <div class="section">
             <h3>Detalles</h3>
             <label for="product-name">Nombre del producto</label>
-            <input type="text" formControlName="productName" placeholder="DevCode">
+            <input type="text"
+                    formControlName="productName"
+                    placeholder="DevCode">
 
             <label for="description">Descripción</label>
-            <textarea id="description" formControlName="description" placeholder="DevCode"></textarea>
+            <textarea id="description"
+                      formControlName="description"
+                      placeholder="DevCode"></textarea>
 
             <label for="product-image">Imagen del producto</label>
             <input type="file" id="product-image">
@@ -21,17 +25,26 @@
             <div class="property-group">
                 <div class="property">
                     <label for="price">Precio</label>
-                    <input type="text" id="price" name="price" placeholder="DevCode">
+                    <input type="text"
+                          id="price"
+                          name="price"
+                          placeholder="DevCode">
                 </div>
                 <div class="property">
                     <label for="category">Categoría</label>
-                    <input type="text" id="category" name="category" placeholder="DevCode">
+                    <input type="text"
+                          id="category"
+                          name="category"
+                          placeholder="DevCode">
                 </div>
             </div>
             <div class="property-group">
                 <div class="property">
                     <label for="sale-price">Precio de venta</label>
-                    <input type="text" id="sale-price" name="sale-price" placeholder="DevCode">
+                    <input type="text"
+                          id="sale-price"
+                          name="sale-price"
+                          placeholder="DevCode">
                 </div>
                 <div class="property">
                     <label for="stock">Stock</label>
@@ -40,7 +53,11 @@
             </div>
         </div>
 
-        <button type="submit" class="submit-button" [disabled]="myForm.invalid">Agregar producto</button>
+        <button type="submit"
+                class="submit-button"
+                [disabled]="myForm.invalid">
+          Agregar producto
+        </button>
     </form>
   </div>
 </div>
