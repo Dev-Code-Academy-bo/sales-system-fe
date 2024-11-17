@@ -11,7 +11,7 @@ import { ButtonComponent } from "../button/button.component";
 export class TitleComponent {
 
   @Input() titleName: string = 'Title'
-  @Input() buttonName: string = 'Here your button name';
+  @Input() buttonName: string = '';
   @Input() iconName: string = '';
   @Input() background: string = 'black';
 

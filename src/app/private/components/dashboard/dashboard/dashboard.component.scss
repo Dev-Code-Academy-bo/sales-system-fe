@@ -1,0 +1,32 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+
+    .nav-bar-section {
+        width: 20%;
+        height: 100%;
+        border-right: 1px solid rgba(238, 238, 238, 0.521);
+    }
+
+    .header-main-container {
+        height: 100%;
+        width: 80%;
+
+        header{
+            height: 50px;
+            border-bottom: 1px solid rgba(238, 238, 238, 0.521);
+            padding: 0 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            p {
+                font-weight: 700;
+            }
+        }
+
+        main {
+            height: calc(100% - 50px);
+        }
+    }
+}

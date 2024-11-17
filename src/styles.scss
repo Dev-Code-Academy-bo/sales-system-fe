@@ -1,6 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    color: var(--main-bg-color);
+    font-weight: 600;
+  }
+
+  input,
+  select,
+  textarea {
+    border-radius: 10px;
+    padding: 5px 0px 5px 10px;
+    font-size: 17px;
+    outline: none;
+    height: 33px;
+    border: 1px solid rgb(212, 212, 212);
+    background-color: white;
+  }
+
+  textarea {
+    height: auto;
+  }
+
+  select {
+    height: 45px;
+  }
+}
+
+.cliente-list-container {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

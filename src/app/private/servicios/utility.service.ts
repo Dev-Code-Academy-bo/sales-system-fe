@@ -1,6 +1,6 @@
+import { User } from './../interfaces/user.interface';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { User } from '../interfaces/user.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class UtilityService {
 
   private name: BehaviorSubject<string> = new BehaviorSubject<string>('Rodrigo');
 
-  users: User[] = [
+  private users: User[] = [
     {
       name: "John",
       lastname: "Doe",
@@ -56,6 +56,27 @@ export class UtilityService {
    public getName(): Observable<string> {
      return this.name.asObservable();
    }
+
+   public getUserData(): User[]  {
+      return this.users;
+   } 
+
+   public setUserData(newUser: any): void {
+    const user: User = {
+        name: newUser.name || '',
+        lastname: newUser.lastname || '',
+        ci: newUser.ci || '',
+        username: newUser.username || '',
+        password: newUser.password || '',
+        phone: newUser.phone || '',
+        address: newUser.address || '',
+        birthdate: newUser.birthdate || '',
+        photo: newUser.photo || '',
+    };
+
+    this.users.push(user); // Almacena el nuevo usuario en el array
+    console.log('Usuario agregado:', user);
+}
 
 
 }

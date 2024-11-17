@@ -3,7 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from "./public/components/login/login.component";
 import { ButtonComponent } from "./shared/button/button.component";
 import { ClientListComponent } from "./private/components/clients/client-list/client-list.component";
-import { DashboardComponent } from "./private/components/dashboard/dashboard.component";
+import { DashboardComponent } from './private/components/dashboard/dashboard/dashboard.component';
+
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { DashboardComponent } from "./private/components/dashboard/dashboard.com
     LoginComponent,
     ButtonComponent,
     ClientListComponent,
-    DashboardComponent
+    DashboardComponent,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
