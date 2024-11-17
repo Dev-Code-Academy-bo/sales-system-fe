@@ -29,7 +29,7 @@ export class UserListComponent implements OnInit {
     })
 
     
-    this.userList = this._utility.users;
+    this.userList = this._utility.getUserData();
   }
 
 
