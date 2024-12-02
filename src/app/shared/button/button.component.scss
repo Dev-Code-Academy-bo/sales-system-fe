@@ -8,9 +8,14 @@ button {
     color: white;
     border: none;
     font-weight: 700;
+    width: 100%;
 
     .mat-icon {
         font-size: 20px;
         margin-bottom: -4px;
     }
+}
+
+.disabled {
+    opacity: 0.5;
 }

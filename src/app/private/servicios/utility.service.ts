@@ -1,6 +1,9 @@
 import { User } from './../interfaces/user.interface';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { Client } from '../interfaces/client.interface';
+import { ClientService } from './client.service';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -44,9 +47,10 @@ export class UtilityService {
       photo: "https://example.com/photos/alicejohnson.jpg",
     },
   ];
-  // private nameTwo: Subject<string> = new Subject<string>();
 
-  constructor() { 
+  constructor(private _clientService: ClientService,
+              private _userService: UserService
+  ) { 
   }
 
   public setName(newName: string): void {
@@ -74,9 +78,28 @@ export class UtilityService {
         photo: newUser.photo || '',
     };
 
-    this.users.push(user); // Almacena el nuevo usuario en el array
+    this.users.push(user);
     console.log('Usuario agregado:', user);
+
+    this.saveUser(newUser)
 }
 
+public saveUser(newUser: any): void {
+  const formData = new FormData;
+  formData.append('name', newUser.name);
+  formData.append('lastname', newUser.lastname);
+  formData.append('ci', newUser.ci);
+  formData.append('username', newUser.username);
+  formData.append('password', newUser.password);
+  formData.append('phone', newUser.phone);
+  formData.append('address', newUser.address);
+  formData.append('birthdate', newUser.birthdate);
+  formData.append('photo', newUser.photo);
 
+  this._userService.postUserData(formData)
+}
+
+public setClientData(clientData: Client): void {
+  this._clientService.setData(clientData);
+}
 }

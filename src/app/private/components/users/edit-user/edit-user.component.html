@@ -1,0 +1,115 @@
+<section class="modal-ontainer">
+    <app-border>
+        <form class="card-form" [formGroup]="userFormGroup">
+            <div class="card-inputs">
+              <div class="input-container">
+                <label for="">Nombre completo</label>
+                <input
+                  maxlength="20"
+                  type="text"
+                  formControlName="name"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('name')?.errors}"
+                />
+              </div>
+      
+              <div class="input-container">
+                <label for="">Telefono</label>
+                <input
+                  type="phone"
+                  formControlName="phone"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('phone')?.errors}"
+                />
+              </div>
+      
+              <div class="input-container">
+                <label for="">Cedula de identidad</label>
+                <input
+                  type="text"
+                  formControlName="ci"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('ci')?.errors}"
+                />
+              </div>
+      
+              <div class="input-container">
+                <label for="">Correo</label>
+                <input
+                  type="text"
+                  formControlName="address"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('address')?.errors}"
+                />
+              </div>
+      
+              <!-- <div class="input-container">
+                <label for="">Contraseña</label>
+                <input
+                  type="text"
+                  formControlName="password"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('password')?.errors}"
+                />
+              </div> -->
+              <app-button
+              [buttonName]="'Cancel'"
+              [iconName]="'cancel'"
+              [background]="'red'"
+              (eventclick)="closeModal()"
+            ></app-button>
+            </div>
+
+            <div class="card-inputs">
+              <div class="input-container">
+                <label for="">Apellidos</label>
+                <input
+                  type="text"
+                  formControlName="lastname"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('lastname')?.errors}"
+                />
+              </div>
+      
+              <div class="input-container">
+                <label for="">Nombre de usuario</label>
+                <input
+                  type="text"
+                  formControlName="username"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('username')?.errors}"
+                />
+              </div>
+      
+              <div class="input-container">
+                <label for="">Role</label>
+                <select>
+                  <option value="administrador">Administrador</option>
+                  <option value="vendedor">Vendedor</option>
+                </select>
+              </div>
+      
+              <div class="input-container">
+                <label for="">Fecha de nacimiento</label>
+                <input
+                  type="date"
+                  formControlName="birthdate"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('birthdate')?.errors}"
+                />
+              </div>
+      
+              <!-- <div class="input-container">
+                <label for="">Imagen de usuario</label>
+                <input
+                  #fileElement
+                  type="file"
+                  (change)="updatePhoto(fileElement.files)"
+                  [ngClass]="{'invalid-input': !userFormGroup.get('photo')?.errors}"
+                />
+              </div> -->
+      
+              <app-button
+                [buttonName]="'Guardar'"
+                [iconName]="'add'"
+                [disabledButton]="userFormGroup.invalid"
+                (eventclick)="enviar()"
+              ></app-button>
+      
+              <div class="card-button"></div>
+            </div>
+          </form>
+      </app-border>
+</section>

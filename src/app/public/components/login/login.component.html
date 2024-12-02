@@ -1,1 +1,23 @@
-<p>login works!</p>
+<section class="login-container">
+    <app-border>
+      <section class="login-section">
+        <p>SISTEMA DE VENTAS DEV CODE</p>
+  
+        <div class="input-container">
+          <label for="">Nombre de cuenta</label>
+          <input type="text">
+        </div>
+  
+        <div class="input-container">
+          <label for="">Contraseña</label>
+          <input type="text">
+        </div>
+  
+        <app-button
+          [iconName]="'login'"
+          [buttonName]="'Sign in'"
+          (eventclick)="clickEvent($event)"
+        ></app-button>
+      </section>
+    </app-border>
+  </section>

@@ -1,42 +1,60 @@
 <section class="cliente-list-container">
-    <div class="title-container">
-        <!-- componente title -->
-         <app-title [titleName]="name" (eventclick)="createUser($event)" [buttonName]="'Create new user'" [iconName]="'add'" [background]="'red'"></app-title>
-    </div>
+  <div class="title-container">
+    <!-- componente title -->
+    <app-title [titleName]="'Create sale'"></app-title>
+  </div>
 
-    <app-border>
-        <div class="border-container">
-            <div class="shared-container">
-                <input type="text">
-            </div>
-    
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Teléfono</th>
-                            <th>Dirección</th>
-                            <th>Birthdate</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @for (user of userList; track $index) {
-                            <tr>
-                                <td changeColor [nameToolTip]="name" >{{user.username | titlecase }}</td>
-                                <td>{{'Sun Nov 10 2024 20:49:00 GMT-0400 (hora de Bolivia)' | date : 'dd MMMM yyyy'}}</td>
-                                <td>{{user.address}}</td>
-                                <td>{{user.birthdate}}</td>
-                                <td class="actions">
-                                    <button class="btn btn-edit">Editar</button>
-                                    <button class="btn btn-delete">Eliminar</button>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
+  <app-border>
+    <div class="card-list">
+      <div class="search-container">
+        <div class="input-container">
+          <label for="">Filtrar por nombre</label>
+          <input type="text" />
         </div>
-    </app-border>
+        <app-button [iconName]="'search'"></app-button>
+      </div>
+
+      <table class="information-container">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Full name</th>
+            <th>CI</th>
+            <th>User name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (user of userList; track $index) {
+          <tr>
+            <td>{{ $index + 1 }}</td>
+            <td class="perfil">
+              <div>
+                <label>{{ user.name }} {{ user.lastname }}</label>
+                <span>{{ user.birthdate | date : "dd MMMM YYYY" }}</span>
+              </div>
+            </td>
+            <td>{{ user.ci }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.address }}</td>
+            <td class="edit-delete-container">
+              <span (click)="createDinamicComponet(user)">
+                <mat-icon class="edit-icon" fontIcon="edit"></mat-icon>
+              </span>
+              <span>
+                <mat-icon class="delete-icon" fontIcon="delete"></mat-icon>
+              </span>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </app-border>
 </section>
+
+
+<ng-template #editUserComponent></ng-template>

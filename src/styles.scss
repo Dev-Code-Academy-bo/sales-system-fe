@@ -20,14 +20,14 @@ body {
 
   label {
     color: var(--main-bg-color);
-    font-weight: 600;
+    font-weight: 500;
   }
 
   input,
   select,
   textarea {
     border-radius: 10px;
-    padding: 5px 0px 5px 10px;
+    padding: 3px 0px 3px 10px;
     font-size: 17px;
     outline: none;
     height: 33px;
@@ -40,7 +40,7 @@ body {
   }
 
   select {
-    height: 45px;
+    height: 41px;
   }
 }
 
@@ -49,4 +49,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.invalid-input {
+  border: 1px rgba(0, 197, 0, 0.541) solid !important;
 }

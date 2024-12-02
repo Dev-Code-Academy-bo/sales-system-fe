@@ -1,1 +1,52 @@
-<p>sales-list works!</p>
+<section class="cliente-list-container">
+    <div class="title-container">
+      <!-- componente title -->
+      <app-title [titleName]="'Create sale'"></app-title>
+    </div>
+  
+    <app-border>
+      <div class="card-list">
+          <div class="search-container">
+            <div class="input-container">
+              <label for="">Filtrar por nombre</label>
+              <input type="text" />
+            </div>
+            <app-button [iconName]="'search'"></app-button>
+          </div>
+      
+          <table class="information-container">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Sale price</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="perfil">
+                  <img
+                    src="https://api-prod-minimal-v610.pages.dev/assets/images/m-product/product-1.webp"
+                    alt=""
+                  />
+                  <div>
+                    <label>Urban Explorer Sneakers</label>
+                    <span>Accessories</span>
+                  </div>
+                </td>
+                <td>Grimes Inc</td>
+                <td>Software Developer</td>
+                <td>Administrator</td>
+                <td class="edit-delete-container">
+                  <mat-icon class="edit-icon" fontIcon="edit"></mat-icon>
+                  <mat-icon class="delete-icon" fontIcon="delete"></mat-icon>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </app-border>
+  </section>
+  

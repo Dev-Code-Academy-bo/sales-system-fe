@@ -1,1 +1,92 @@
-<p>create-product works!</p>
+<section class="cliente-list-container">
+    <div class="title-container">
+      <!-- componente title -->
+      <app-title [titleName]="'Create Client'"></app-title>
+    </div>
+  
+    <app-border>
+      <form class="card-form" [formGroup]="productForm">
+        <div class="input-container">
+          <h3>Detalles</h3>
+          <label for="product-name">Nombre del producto</label>
+          <input
+            type="text"
+            formControlName="productName"
+            placeholder="DevCode"
+            [ngClass]="{'invalid-input': !productForm.get('productName')?.errors}"
+          />
+  
+          <label for="description">Descripción</label>
+          <textarea
+            id="description"
+            formControlName="description"
+            placeholder="DevCode"
+            [ngClass]="{'invalid-input': !productForm.get('description')?.errors}"
+          ></textarea>
+  
+          <label for="product-image">Imagen del producto</label>
+          <input type="file" id="product-image" formControlName="image" [ngClass]="{'invalid-input': !productForm.get('image')?.errors}"/>
+        </div>
+  
+        <div class="section">
+          <h3>Propiedades</h3>
+          <div class="property-group">
+            <div class="input-container">
+              <label for="price">Precio</label>
+              <input
+                type="text"
+                id="price"
+                name="price"
+                placeholder="DevCode"
+                formControlName="price"
+                [ngClass]="{'invalid-input': !productForm.get('price')?.errors}"
+              />
+            </div>
+            <div class="input-container">
+              <label for="category">Categoría</label>
+              <input
+                type="text"
+                id="category"
+                name="category"
+                placeholder="DevCode"
+                formControlName="category"
+                [ngClass]="{'invalid-input': !productForm.get('category')?.errors}"
+              />
+            </div>
+          </div>
+          <div class="property-group">
+            <div class="input-container">
+              <label for="sale-price">Precio de venta</label>
+              <input
+                type="text"
+                id="sale-price"
+                name="sale-price"
+                placeholder="DevCode"
+                formControlName="salePrice"
+                [ngClass]="{'invalid-input': !productForm.get('salePrice')?.errors}"
+              />
+            </div>
+            <div class="input-container">
+              <label for="stock">Stock</label>
+              <input
+                type="text"
+                id="stock"
+                name="stock"
+                placeholder="DevCode"
+                formControlName="stock"
+                [ngClass]="{'invalid-input': !productForm.get('stock')?.errors}"
+              />
+            </div>
+          </div>
+        </div>
+  
+        <app-button
+          [buttonName]="'Guardar'"
+          [iconName]="'add'"
+          (eventclick)="saveForm()"
+          [disabledButton]="productForm.invalid"
+        ></app-button>
+      </form>
+    </app-border>
+  </section>
+

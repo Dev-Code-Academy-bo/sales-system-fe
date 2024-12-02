@@ -1,1 +1,60 @@
-<p>create-client works!</p>
+<section class="cliente-list-container">
+    <div class="title-container">
+      <!-- componente title -->
+      <app-title [titleName]="'Create Client'"></app-title>
+    </div>
+  
+    <app-border>
+      <form class="card-form" [formGroup]="clientFormControl">
+        <div class="card-inputs">
+          <div class="input-container">
+            <label for="">Nombre</label>
+            <input
+              maxlength="20"
+              type="text"
+              formControlName="name"
+              [ngClass]="{'invalid-input': !clientFormControl.get('name')?.errors}"
+            />
+          </div>
+  
+          <div class="input-container">
+            <label for="">Apellido Paterno</label>
+            <input
+              type="text"
+              formControlName="paternal"
+              [ngClass]="{'invalid-input': !clientFormControl.get('paternal')?.errors}"
+            />
+          </div>
+
+        </div>
+        <div class="card-inputs">
+          <div class="input-container">
+            <label for="">Apellido Materno</label>
+            <input
+              type="text"
+              formControlName="maternal"
+              [ngClass]="{'invalid-input': !clientFormControl.get('maternal')?.errors}"
+            />
+          </div>
+  
+          <div class="input-container">
+            <label for="">NIT / CI</label>
+            <input
+              type="text"
+              formControlName="nit"
+              [ngClass]="{'invalid-input': !clientFormControl.get('nit')?.errors}"
+            />
+          </div>
+  
+          <app-button
+            [buttonName]="'Guardar'"
+            [iconName]="'add'"
+            (eventclick)="saveForm()"
+            [disabledButton]="clientFormControl.invalid"
+          ></app-button>
+  
+          <div class="card-button"></div>
+        </div>
+      </form>
+    </app-border>
+  </section>

@@ -1,49 +1,90 @@
-.cliente-list-container {
-    padding: 100px;
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  gap: 10px;
+
+  app-input {
+    width: calc(100% - 50px);
+  }
+
+  app-button {
+    width: 50px;
+  }
+}
+
+.information-container {
+  padding-top: 30px;
+  font-size: 15px;
+
+  thead {
+    background-color: rgba(235, 235, 235, 0.404);
+    font-size: 15px;
+  }
+
+  th {
+    text-align: start;
+    padding: 12px;
+    color: rgb(117, 117, 117);
+  }
+
+  tbody{
+    td {
+        padding: 10px;
+    }
+  }
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+  }
+
+  div {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+
+    span {
+      font-size: 14px;
+      color: rgb(105, 105, 105);
+    }
+  }
 }
 
-.border-container {
-    padding: 20px;
+td {
+  text-justify: center;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.edit-delete-container {
+  text-align: center;
+  display: flex;
+  gap: 10px;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-radius: 10px;
+.edit-icon {
+  color: #5f5f5f;
+  cursor: pointer;
 }
 
-th {
-    background-color: #F6F6F6;
-    color: white;
-    color: black;
-}
-
-.actions {
-    display: flex;
-    gap: 8px;
-}
-
-.btn {
-    padding: 6px 12px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.btn-edit {
-    background-color: #4CAF50;
-}
-
-.btn-delete {
-    background-color: #f44336;
+.delete-icon {
+  color: rgb(255, 85, 85);
+  cursor: pointer;
 }

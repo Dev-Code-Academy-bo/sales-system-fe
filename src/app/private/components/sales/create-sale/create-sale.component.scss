@@ -1,0 +1,129 @@
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+  }
+  
+  .card-form {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+  }
+  
+  .card-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .image-content-dashed {
+    border-radius: 50%;
+    border: 1px dashed rgba(223, 223, 223, 0.582);
+    padding: 5px;
+  }
+  
+  .card-button {
+    display: flex;
+    justify-content: end;
+  }
+  
+  button {
+    background-color: rgba(0, 0, 0, 0.897);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 15px 18px;
+    font-weight: 900;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .disabled {
+    opacity: 0.5;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    gap: 10px;
+
+    app-input {
+        width: calc(100% - 50px);
+    }
+
+    app-button {
+        width: 50px;
+    }
+}
+
+.information-container {
+    padding-top: 30px;
+    font-size: 15px;
+
+    thead {
+        background-color: rgba(235, 235, 235, 0.404);
+        font-size: 15px;
+    }
+
+    th {
+        text-align: start; 
+        padding: 12px;
+        color: rgb(117, 117, 117);
+    }
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    img {
+        width: 70px;
+        height: 70px;
+        border-radius: 10%;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            font-size: 14px;
+            color: rgb(105, 105, 105);
+        }
+    }
+}
+
+td {
+    text-justify: center;
+}
+
+.edit-delete-container {
+    text-align: center;
+}
+
+.edit-icon {
+color: #5f5f5f;    
+}
+
+.delete-icon {
+    color: rgb(255, 85, 85);
+}

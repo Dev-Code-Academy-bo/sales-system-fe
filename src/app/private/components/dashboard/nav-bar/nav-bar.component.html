@@ -1,15 +1,95 @@
-<p>nav-bar works!</p>
+<section class="slider-container">
+  <div class="sidebar-logo">
+    <mat-icon fontIcon="api"></mat-icon>
+  </div>
 
-<a href="/dashboard/userList">User List</a><br>
-<a href="/dashboard/createUser">Create User</a>
+  <nav class="sidebar-nav">
+    <section class="navbar-section">
+      <div class="title">
+        <div>
+          <mat-icon fontIcon="account_circle"></mat-icon>
+          <label>Users</label>
+        </div>
+      </div>
 
-      <a
-        routerLink="/dashboard/userList"
-        routerLinkActive="active"
-        >First Component</a
-      >
-      <a
-        routerLink="/dashboard/createUser"
-        routerLinkActive="active"
-        >Second Component</a
-      >
+      <div #enlacesAdmin class="tree open">
+        <a
+          routerLink="/dashboard/createUser"
+          routerLinkActive="active"
+          >Create user</a
+        >
+        <a
+          routerLink="/dashboard/userList"
+          routerLinkActive="active"
+          >User list</a
+        >
+      </div>
+    </section>
+
+    <section class="navbar-section">
+      <div class="title">
+        <div>
+          <mat-icon fontIcon="inventory_2"></mat-icon>
+          <label>Products</label>
+        </div>
+      </div>
+
+      <div #enlacesProducts class="tree open">
+        <a
+          routerLink="/dashboard/createProduct"
+          routerLinkActive="active"
+          >Create product</a
+        >
+        <a
+          routerLink="/dashboard/productList"
+          routerLinkActive="active"
+          >Products list</a
+        >
+      </div>
+    </section>
+
+    <section class="navbar-section">
+      <div class="title">
+        <div>
+          <mat-icon fontIcon="inventory_2"></mat-icon>
+          <label>Clients</label>
+        </div>
+      </div>
+
+      <div #enlacesProducts class="tree open">
+        <a
+          routerLink="/dashboard/createClient"
+          routerLinkActive="active"
+          >Create client</a
+        >
+        <a
+          routerLink="/dashboard/clientList"
+          routerLinkActive="active"
+          >Client list</a
+        >
+      </div>
+    </section>
+
+    <section class="navbar-section">
+      <div class="title">
+        <div>
+          <mat-icon fontIcon="inventory_2"></mat-icon>
+          <label>Sales</label>
+        </div>
+      </div>
+
+      <div #enlacesProducts class="tree open">
+        <a
+          routerLink="/dashboard/createSale"
+          routerLinkActive="active"
+          >Create sale</a
+        >
+        <a
+          routerLink="/dashboard/saleList"
+          routerLinkActive="active"
+          >Sales</a
+        >
+      </div>
+    </section>
+  </nav>
+</section>

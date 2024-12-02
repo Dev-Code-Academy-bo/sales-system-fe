@@ -1,7 +1,6 @@
-<button [style.backgroundColor]="background" (click)="onclick($event)">
+<button [disabled]="disabledButton" [ngClass]="{'disabled': disabledButton}" [style.backgroundColor]="background" (click)="onclick($event)">
     @if (iconName !== '') {
         <mat-icon aria-hidden="false" aria-label="Example home icon" [fontIcon]="iconName"></mat-icon>
     }
-
     {{buttonName}}
 </button>
